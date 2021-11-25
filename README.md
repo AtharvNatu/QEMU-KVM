@@ -3,8 +3,8 @@ KVM Virtualization
 
 To Install QEMU and KVM on Arch based distros, use the following commands:
 
-1. sudo pacman -S qemu qemu-arch-extra ovmf bridge-utils dnsmasq vde2 \
- openbsd-netcat ebtables iptables
+   sudo pacman -S qemu qemu-arch-extra ovmf bridge-utils dnsmasq vde2 \
+   openbsd-netcat ebtables iptables
 
 Package insights:
 
@@ -19,7 +19,7 @@ Package insights:
 
 Virt-manager is a UI that helps to create and organize the VM’s. And virt-viewer is used to open remote window into the VM instance.
 
-sudo pacman -S virt-manager virt-viewer
+   sudo pacman -S virt-manager virt-viewer
 
 3. Start the Services #
 
