@@ -15,13 +15,13 @@ Package insights:
     openbsd-netcat network testing tool (Optional)
     ebtables and iptables to create packet routing and firewalls
 
-2. Virt-Manager and libvirtd Service Install #
+2. ### Virt-Manager and libvirtd Service Install ####
 
 Virt-manager is a UI that helps to create and organize the VM’s. And virt-viewer is used to open remote window into the VM instance.
 
    sudo pacman -S virt-manager virt-viewer
 
-3. Start the Services #
+3. ### Start the Services ####
 
 To Autostart the services at boot:
 
