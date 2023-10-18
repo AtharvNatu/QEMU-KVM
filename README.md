@@ -3,8 +3,8 @@ KVM Virtualization
 
 To Install QEMU and KVM on Arch based distros, use the following commands:
 
-   sudo pacman -S qemu qemu-arch-extra ovmf bridge-utils dnsmasq vde2 \
-   openbsd-netcat ebtables iptables
+```   sudo pacman -S qemu qemu-arch-extra ovmf bridge-utils dnsmasq vde2 \
+   openbsd-netcat ebtables iptables ```
 
 Package insights:
 
