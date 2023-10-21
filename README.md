@@ -30,6 +30,10 @@ sudo systemctl enable libvirtd.service
 # Start the Service Right now
 sudo systemctl start libvirtd.service
 
+Start the network
+
+     sudo virsh net-start default
+
     In case you wish to see if the libvirtd.service has actually started or not:
 
     sudo systemctl status libvirtd.service
