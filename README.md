@@ -29,7 +29,15 @@ sudo useradd -g $USER libvirt
 sudo useradd -g $USER libvirt-kvm
 ```
 
-GPU Passthrough
+# GPU Passthrough #
+
+> **Warning**
+> GPU Passthrough on Mobile(Laptop) Devices and Desktops will only work if you have 2 GPUs (iGPU and dGPU or 2 dGPUs)
+
+Download Virtio Tools ISO From Following Link
+https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md
+
+Enter the following commands to check for GPU that can be virtualized
 
 
 
