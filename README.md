@@ -34,10 +34,13 @@ sudo useradd -g $USER libvirt-kvm
 > **Warning**
 > GPU Passthrough on Mobile(Laptop) Devices and Desktops will only work if you have 2 GPUs (iGPU and dGPU or 2 dGPUs)
 
-Download Virtio Tools ISO From Following Link
-https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md
+Download Virtio Tools ISO From Following Link - https://github.com/virtio-win/virtio-win-pkg-scripts/blob/master/README.md
 
-Enter the following commands to check for GPU that can be virtualized
+Enter the following command to check for GPU that can be virtualized
+E.g. For NVIDIA dGPUs, enter following command
+```shell
+lspci -nn | grep -E "NVIDIA"
+```
+Copy the PCI IDs for GPU and Audio Controller and save them for later use
 
-
-
+![Screenshot_20231022_120512](https://github.com/AtharvNatu/QEMU-KVM/assets/66716779/b854cefd-e592-4cf5-8249-531cf9659a14)
