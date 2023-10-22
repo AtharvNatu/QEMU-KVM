@@ -105,8 +105,17 @@ lspci -k | grep -E "vfio-pci|NVIDIA"
 
 ![Screenshot_20231022_123957](https://github.com/AtharvNatu/QEMU-KVM/assets/66716779/9dbaee51-156c-4530-939f-aba3ffcaa5bf)
 
-Add ther virtio ISO in VMM
+Add the virtio ISO in VMM
 
 ![Screenshot_20231022_124213](https://github.com/AtharvNatu/QEMU-KVM/assets/66716779/244ef5f6-f8b7-4e7b-9d83-2c022ba7d4d5)
+
+Add PCI hardware to VM
+
+![Screenshot_20231022_134720](https://github.com/AtharvNatu/QEMU-KVM/assets/66716779/815c2a06-46c1-44f7-a04a-dc10d74c9739)
+
+Run the virtio tools setup
+
+Install NVIDIA Drivers
+
 
 
