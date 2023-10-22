@@ -44,3 +44,38 @@ lspci -nn | grep -E "NVIDIA"
 Copy the PCI IDs for GPU and Audio Controller and save them for later use
 
 ![Screenshot_20231022_120512](https://github.com/AtharvNatu/QEMU-KVM/assets/66716779/b854cefd-e592-4cf5-8249-531cf9659a14)
+
+Enabling IOMMU Unit - Edit the grub file
+```shell
+sudo nano /etc/default/grub
+```
+
+Overwrite existing line GRUB_CMDLINE_LINUX_DEFAULT="quiet splash", Replace the GPU-ID and AUDIO-ID with earlier saved PCI IDs
+
+For AMD CPUs
+```shell
+GRUB_CMDLINE_LINUX_DEFAULT="amd_iommu=on iommu=pt vfio-pci.ids=GPU-ID,AUDIO-ID"
+```
+
+For Intel CPUs
+```shell
+GRUB_CMDLINE_LINUX_DEFAULT="intel_iommu=on iommu=pt vfio-pci.ids=GPU-ID,AUDIO-ID"
+```
+
+Save and Exit by pressing Ctrl + O and Ctrl + X
+
+Update the GRUB Bootloader Configuration
+```shell
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+Reboot
+```shell
+sudo reboot now
+```
+
+Isolating the GPU
+```shell
+sudo reboot now
+```
+
