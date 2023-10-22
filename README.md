@@ -2,9 +2,11 @@
 
 KVM Virtualization on Kubuntu 23.10
 
-Install required software and dependencies
+Install required software and dependencies and reboot (Recommended)
 ```shell
 sudo apt install qemu-kvm virt-manager bridge-utils
+
+sudo reboot now
 ```
 
 To Install QEMU and KVM on Arch based distros, use the following commands:
