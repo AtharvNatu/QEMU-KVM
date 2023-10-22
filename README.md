@@ -75,6 +75,25 @@ sudo reboot now
 ```
 
 Isolating the GPU
+
+Create and open the following file
+```shell
+sudo touch /etc/modprobe.d/vfio.conf
+sudo nano /etc/modprobe.d/vfio.conf 
+```
+
+Add following content and save the file
+```shell
+options vfio-pci ids=GPU-ID,AUDIO-ID
+softdep nvidia pre: vfio-pci
+```
+
+Update Initramfs
+```shell
+sudo update-initramfs -c -k $(uname -r)
+```
+
+Reboot
 ```shell
 sudo reboot now
 ```
