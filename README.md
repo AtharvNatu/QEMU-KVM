@@ -1,5 +1,11 @@
-# QEMU-KVM
-KVM Virtualization
+# QEMU-KVM with GPU Passthrough
+
+KVM Virtualization on Kubuntu 23.10
+
+Install required software and dependencies
+```shell
+sudo apt install qemu-kvm virt-manager bridge-utils
+```
 
 To Install QEMU and KVM on Arch based distros, use the following commands:
 
