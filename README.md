@@ -118,4 +118,19 @@ Run the virtio tools setup
 Install NVIDIA Drivers
 
 
+> [!IMPORTANT]  
+> The total amount of cores you want to pass to your VM is equal to the number of physical core times (cores) the number of virtual cores(threads) per core (cores X threads).
+> In my case I have a Ryzen 5 5600H with 6 cores and 12 threads. I want to pass 5 physical cores to the VM and reserve 1 for the host. Thus, I’m passing a total of 10 cores and will have to set my vcpu tag to 10.
+
+```shell
+<domain type='kvm' ...>
+  ...
+  <cpu mode='host-passthrough' check='none'>
+    <topology sockets='1' dies='1' cores='5' threads='2'/>
+  </cpu>
+  ...
+</domain>
+```
+
+> 
 
