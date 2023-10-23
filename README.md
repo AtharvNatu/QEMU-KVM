@@ -45,7 +45,44 @@ sudo useradd -g $USER libvirt-kvm
 </domain>
 ```
 
-> 
+Enlightenments
+```shell
+<features>
+    <acpi/>
+    <apic/>
+    <hyperv mode="custom">
+      <relaxed state="on"/>
+      <vapic state="on"/>
+      <spinlocks state="on" retries="8191"/>
+      <vpindex state="on"/>
+      <synic state="on"/>
+      <stimer state="on">
+        <direct state="on"/>
+      </stimer>
+      <reset state="on"/>
+      <vendor_id state="on" value="KVM Hv"/>
+      <frequencies state="on"/>
+      <reenlightenment state="on"/>
+      <tlbflush state="on"/>
+      <ipi state="on"/>
+      <evmcs state="on"/>
+    </hyperv>
+    <vmport state="off"/>
+    <smm state="on"/>
+  </features>
+```
+
+Clock Optimizations & Fixes
+```shell
+<clock offset='localtime'>
+   ...
+  <timer name='rtc' tickpolicy='catchup'/>
+  <timer name='pit' tickpolicy='delay'/>
+  <timer name='hpet' present='no'/>
+  ...
+</clock>
+```
+
 
 # GPU Passthrough #
 
@@ -135,4 +172,4 @@ Run the virtio tools setup
 
 Install NVIDIA Drivers
 
-
+Reference - https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm/#2-12-configure-chipset-and-firmware
