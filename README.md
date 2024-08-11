@@ -1,6 +1,9 @@
 # QEMU-KVM with GPU Passthrough
 
-KVM Virtualization on Kubuntu 23.10
+KVM Virtualization on Kubuntu 23.10 onwards
+
+> [!IMPORTANT]  
+> !! Install Nvidia Proprietary Drivers First !!
 
 Install required software and dependencies
 ```shell
